@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta elements -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="">
+    <meta name="keywords" content="Song, Lyrics, Music">
+    <meta name="author" content="Alexa Hendry">
+
+    <!-- site title and favicon -->
+    <title>Melodics</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/5366bdfdf4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!-- site logo -->
+        <a href="{% url 'home' %}" aria-label="Link to the site's homepage">
+            <h1><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i> Melodics</h1>
+        </a>
+
+        <!-- navigation links -->
+        <nav id="site-nav">
+            <ul>
+                <!-- link to Homepage (Song List) -->
+                <li class="nav-list">
+                    <a href="{% url 'home' %}" aria-label="Link to the Homepage" class="nav-active">
+                        <h2>Home</h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- main page container -->
+        <div id="main-page-container">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <ul>
+            <!-- site name -->
+            <li>Melodics &copy;</li>
+            <!-- about site -->
+            <li>This website was created by Alexa Hendry as a portfolio project and has no commercial purpose.</li>
+            <!-- site creator social media links -->
+            <li>
+                <a href="https://github.com/AlexaH88" target="_blank"
+                    aria-label="Link to Alexa Hendry's GitHub profile (opens in a new tab)"><i
+                        class="fa-brands fa-github-alt"></i></a>
+                <a href="https://www.linkedin.com/in/alexa-hendry/" target="_blank"
+                    aria-label="Link to Alexa Hendry's LinkedIn profile (opens in a new tab)"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
