@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div id="main-page-container">
+
+        <section class="horizontal-section">
+
+            <h2>{{ song.title }}</h2>
+            <p>Artist: {{ song.artist }}</p>
+            <p>Album: {{ song.album }}</p>
+            <p>{{ song.lyrics }}</p>
+
+        </section>
+
+    </div>
+
+{% endblock content %}

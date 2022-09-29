@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
             {% for song in song_list %}
 
                 <div>
-                    <a href="#">
+                    <a href="{% url 'song_detail' song.slug %}">
                         <h2>{{ song.title }}</h2>
                         <p>Artist: {{ song.artist }}</p>
                         <p>Album: {{ song.album }}</p>

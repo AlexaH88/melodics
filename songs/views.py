@@ -13,6 +13,7 @@ class SongList(generic.ListView):
 class SongDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
+        queryset = Song.objects.filter()
         song = get_object_or_404(queryset, slug=slug)
         artist = song.artist
         album = song.album
