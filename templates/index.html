@@ -7,10 +7,13 @@
         <section class="horizontal-section">
             {% for song in song_list %}
 
-                Song Title: {{ song.title }}
-                Artist: {{ song.artist }}
-                Album: {{ song.album }}
-                Lyrics: {{ song.lyrics }}
+                <div>
+                    <a href="#">
+                        <h2>{{ song.title }}</h2>
+                        <p>Artist: {{ song.artist }}</p>
+                        <p>Album: {{ song.album }}</p>
+                    </a>
+                </div>
 
             {% endfor %}
         </section>

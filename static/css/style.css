@@ -63,18 +63,8 @@ i {
     color: black;
 }
 
-.horizontal-section button {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.horizontal-section th {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.horizontal-section td {
-    font-size: 2.5rem;
+.horizontal-section a:hover {
+    color: #34afa5;
 }
 
 /* header */
