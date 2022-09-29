@@ -4,10 +4,14 @@
 
 <div>
 
-Song Title: {{ song.title }}
-Artist: {{ song.artist }}
-Album: {{ song.album }}
-Lyrics: {{ song.lyrics }}
+    {% for song in song_list %}
+
+        Song Title: {{ song.title }}
+        Artist: {{ song.artist }}
+        Album: {{ song.album }}
+        Lyrics: {{ song.lyrics }}
+
+    {% endfor %}
 
 </div>
 
