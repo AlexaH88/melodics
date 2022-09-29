@@ -1,0 +1,167 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* full site styles */
+* {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* flexbox code taken from Stack Overflow - more details in the README */
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+section,
+footer {
+    padding: 2rem 4rem;
+}
+
+/* fonts and colours */
+h1,
+h2 {
+    font-family: 'Permanent Marker', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+body {
+    font-family: 'Permanent Marker', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+li {
+    font-size: 2rem;
+    list-style: none;
+}
+
+ol li {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 0.8rem !important;
+}
+
+i {
+    font-size: 5rem;
+    color: black;
+}
+
+.horizontal-section button {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.horizontal-section th {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.horizontal-section td {
+    font-size: 2.5rem;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34afa5;
+    width: 100vw;
+    position: fixed;
+    z-index: +2;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    padding-left: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+.nav-active {
+    color: white;
+}
+
+#hamburger-nav {
+    display: none;
+}
+
+/* main page sections */
+#main-page-container {
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    margin: 2rem 0rem;
+}
+
+section li {
+    margin: 1rem 0rem;
+}
+
+.horizontal-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 0rem;
+}
+
+.vertical-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0rem;
+}
+
+/* footer */
+footer {
+    margin-top: auto;
+    background-color: #34afa5;
+}
+
+footer i {
+    color: black;
+    font-size: 2.3rem;
+    padding: 0rem 0.2rem;
+}
+
+footer i:hover {
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

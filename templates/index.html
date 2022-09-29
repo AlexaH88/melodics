@@ -2,17 +2,19 @@
 
 {% block content %}
 
-<div>
+    <div id="main-page-container">
 
-    {% for song in song_list %}
+        <section class="horizontal-section">
+            {% for song in song_list %}
 
-        Song Title: {{ song.title }}
-        Artist: {{ song.artist }}
-        Album: {{ song.album }}
-        Lyrics: {{ song.lyrics }}
+                Song Title: {{ song.title }}
+                Artist: {{ song.artist }}
+                Album: {{ song.album }}
+                Lyrics: {{ song.lyrics }}
 
-    {% endfor %}
+            {% endfor %}
+        </section>
 
-</div>
+    </div>
 
 {% endblock content %}
