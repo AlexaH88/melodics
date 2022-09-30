@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Song
+from . forms import SongForm
 
 
 class SongList(generic.ListView):
@@ -26,6 +27,20 @@ class SongDetail(View):
                 "song": song,
                 "artist": artist,
                 "album": album,
-                "lyrics": lyrics
+                "lyrics": lyrics,
+                "song_form": SongForm()
+            },
+        )
+
+
+class AddSong(View):
+
+    def get(self, request):
+
+        return render(
+            request,
+            "add_song.html",
+            {
+                "song_form": SongForm()
             },
         )

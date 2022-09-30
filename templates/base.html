@@ -46,6 +46,11 @@
                 {% if user.is_authenticated %}
 
                 <li class="nav-list">
+                    <a href="{% url 'add_song' %}" aria-label="Add song to the site">
+                        <h2>Add Song</h2>
+                    </a>
+                </li>
+                <li class="nav-list">
                     <a href="{% url 'account_logout' %}" aria-label="Log out of account">
                         <h2>Logout</h2>
                     </a>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+    <div id="main-page-container">
+
+        <section>
+            {% if user.is_authenticated %}
+
+            <h2>Add a song:</h2>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post">
+                {{ song_form | crispy }}
+                {% csrf_token %}
+                <button type="submit">Submit</button>
+            </form>
+
+            {% endif %}
+        </section>
+
+    </div>
+
+{% endblock content %}
