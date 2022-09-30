@@ -42,6 +42,30 @@
                         <h2>Home</h2>
                     </a>
                 </li>
+
+                {% if user.is_authenticated %}
+
+                <li class="nav-list">
+                    <a href="{% url 'account_logout' %}" aria-label="Log out of account">
+                        <h2>Logout</h2>
+                    </a>
+                </li>
+
+                {% else %}
+                
+                <li class="nav-list">
+                    <a href="{% url 'account_signup' %}" aria-label="Sign up for an account">
+                        <h2>Sign Up</h2>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="{% url 'account_login' %}" aria-label="Log in to account">
+                        <h2>Login</h2>
+                    </a>
+                </li>
+
+                {% endif %}
+
             </ul>
         </nav>
 
