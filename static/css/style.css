@@ -1,5 +1,5 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Righteous&display=swap');
 
 /* full site styles */
 * {
@@ -31,7 +31,7 @@ footer {
 /* fonts and colours */
 h1,
 h2 {
-    font-family: 'Permanent Marker', sans-serif;
+    font-family: 'Righteous', sans-serif;
 }
 
 h1 {
@@ -43,8 +43,7 @@ h2 {
 }
 
 body {
-    font-family: 'Permanent Marker', sans-serif;
-    letter-spacing: 0.5px;
+    font-family: 'Kalam', sans-serif;
 }
 
 li {
@@ -63,7 +62,7 @@ i {
     color: black;
 }
 
-.horizontal-section a:hover {
+section a:hover {
     color: #34afa5;
 }
 
@@ -128,9 +127,10 @@ section li {
 
 .vertical-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 5rem 0rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 /* footer */

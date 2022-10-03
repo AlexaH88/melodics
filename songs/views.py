@@ -8,7 +8,7 @@ class SongList(generic.ListView):
     model = Song
     queryset = Song.objects.order_by('artist')
     template_name = 'index.html'
-    paginate_by = 6
+    # paginate_by = 6
 
 
 class SongDetail(View):
