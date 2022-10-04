@@ -38,14 +38,19 @@ h1 {
     font-size: 6rem;
 }
 
-h2 {
+header h2 {
     font-size: 4rem;
+}
+
+section h2 {
+    font-size: 3rem;
 }
 
 body {
     font-family: 'Kalam', sans-serif;
 }
 
+p,
 li {
     font-size: 2rem;
     list-style: none;
@@ -106,7 +111,7 @@ a:hover {
 
 /* main page sections */
 #main-page-container {
-    margin-top: 150px;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -127,10 +132,13 @@ section li {
 
 .vertical-section {
     display: flex;
-    margin: 5rem 0rem;
-    flex-direction: column;
+    margin: 2rem 0rem;
     flex-wrap: wrap;
-    align-content: center;
+}
+
+.card {
+    display: flex;
+    width: 50%;
 }
 
 /* footer */

@@ -7,7 +7,7 @@
         <section class="vertical-section">
             {% for song in song_list %}
 
-                <div>
+                <div class="card">
                     <a href="{% url 'song_detail' song.slug %}">
                         <h2>{{ song.title }}</h2>
                         <p>Artist: {{ song.artist }}</p>
