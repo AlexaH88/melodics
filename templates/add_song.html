@@ -9,15 +9,30 @@
         <section class="vertical-section">
             {% if user.is_authenticated %}
 
-            <h2>Add a song:</h2>
-            <p>Posting as: {{ user.username }}</p>
-            <form method="post">
-                {{ song_form | crispy }}
-                {% csrf_token %}
-                <button type="submit">Submit</button>
-            </form>
+            <div class="card">
+
+                <h2>Add a song:</h2>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    {{ song_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit">Submit</button>
+                </form>
+
+                {% if song_added %}
+                <br>
+                <p>
+                    <span class="alert">
+                        Your song has been added successfully.
+                    </span>
+                </p>
+
+                {% endif %}
+
+            </div>
 
             {% endif %}
+
         </section>
 
     </div>

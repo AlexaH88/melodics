@@ -142,6 +142,15 @@ section li {
     width: 50%;
 }
 
+.alert {
+    background-color: rgba(52, 175, 165, 0.5);
+    padding: 0.5rem;
+    border: #34afa5 solid 1px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 /* footer */
 footer {
     margin-top: auto;

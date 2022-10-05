@@ -40,7 +40,8 @@ class AddSong(View):
             request,
             "add_song.html",
             {
-                "song_form": SongForm()
+                "song_form": SongForm(),
+                "song_added": False
             },
         )
 
@@ -59,6 +60,7 @@ class AddSong(View):
             request,
             "add_song.html",
             {
-                "song_form": SongForm()
+                "song_form": SongForm(),
+                "song_added": True
             },
         )
