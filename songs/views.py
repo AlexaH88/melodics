@@ -27,7 +27,7 @@ class SongDetail(View):
                 "song": song,
                 "artist": artist,
                 "album": album,
-                "lyrics": lyrics,
+                "lyrics": lyrics
             },
         )
 
@@ -63,4 +63,14 @@ class AddSong(View):
                 "song_form": SongForm(),
                 "song_added": True
             },
+        )
+
+
+class Account(View):
+
+    def get(self, request):
+
+        return render(
+            request,
+            "account.html",
         )

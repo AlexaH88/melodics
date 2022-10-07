@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="main-page-container">
+
+        <section class="vertical-section">
+            
+            {% if user.is_authenticated %}
+
+            <div class="card">
+                <h2>Hi, {{ user.username }}!</h2>
+                <p>Please feel free to contribute to this site by creating your own song entries.</p>
+                <p>You can add, edit, and delete your songs below.</p>
+            </div>
+
+            <div class="card">
+                <button href="{% url 'add_song' %}">Add Song</button>
+            </div>
+
+            <div class="card">
+                <h2>Your songs:</h2>
+                {% for song in song_list %}
+
+                    {% if user.username in song %}
+
+                    <div class="card">
+                        <a href="{% url 'song_detail' song.slug %}">
+                            <h2>{{ song.title }}</h2>
+                            <p>Artist: {{ song.artist }}</p>
+                            <p>Album: {{ song.album }}</p>
+                        </a>
+                    </div>
+                    
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+
+            {% endif %}
+
+        </section>
+
+    </div>
+
+{% endblock content %}
