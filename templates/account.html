@@ -10,33 +10,15 @@
 
             <div class="card">
                 <h2>Hi, {{ user.username }}!</h2>
-                <p>Please feel free to contribute to this site by creating your own song entries.</p>
-                <p>You can add, edit, and delete your songs below.</p>
+                <p>You can view, modify or delete your account details here.</p>
             </div>
 
             <div class="card">
-                <a href="{% url 'add_song' %}">
-                    <button>Add Song</button>
-                </a>
-            </div>
-
-            <div class="card">
-                <h2>Your songs:</h2>
-                {% for song in song_list %}
-
-                    {% if user.username in song %}
-
-                    <div class="card">
-                        <a href="{% url 'song_detail' song.slug %}">
-                            <h2>{{ song.title }}</h2>
-                            <p>Artist: {{ song.artist }}</p>
-                            <p>Album: {{ song.album }}</p>
-                        </a>
-                    </div>
-                    
-                    {% endif %}
-
-                {% endfor %}
+                <h2>Account Details:</h2>
+                <p>Username: {{ user.username }}</p>
+                <p>Email: {{ user.email }}</p>
+                <p>Date Joined: {{ user.date_joined }}</p>
+                <p>Last Login: {{ user.last_login }}</p>
             </div>
 
             {% endif %}

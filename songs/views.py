@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.contrib.auth.models import User
 from .models import Song
 from . forms import SongForm
 
@@ -66,11 +67,23 @@ class AddSong(View):
         )
 
 
-class Account(View):
+class AccountDetail(View):
 
-    def get(self, request):
+    def get(self, request, *args, **kwargs):
+
+        model = User
+        username = model.username
+        email = model.email
+        date_joined = model.date_joined
+        last_login = model.last_login
 
         return render(
             request,
             "account.html",
+            {
+                "username": username,
+                "email": email,
+                "date_joined": date_joined,
+                "last_login": last_login
+            },
         )
