@@ -21,6 +21,13 @@
                 <p>Last Login: {{ user.last_login }}</p>
             </div>
 
+            <div class="card">
+                <h2>Songs:</h2>
+                    {% for song in songs %}
+                        <p>{{ song }}</p>
+                    {% endfor %}
+            </div>
+
             {% endif %}
 
         </section>

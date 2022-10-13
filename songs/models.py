@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Song(models.Model):
@@ -7,6 +8,9 @@ class Song(models.Model):
     artist = models.TextField(max_length=200)
     album = models.TextField(max_length=200)
     lyrics = models.TextField()
+    uploaded_by = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='song'
+        )
 
     class Meta:
         ordering = ['artist']

@@ -17,18 +17,12 @@ class SongDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Song.objects.filter()
         song = get_object_or_404(queryset, slug=slug)
-        artist = song.artist
-        album = song.album
-        lyrics = song.lyrics
 
         return render(
             request,
             "song_detail.html",
             {
                 "song": song,
-                "artist": artist,
-                "album": album,
-                "lyrics": lyrics
             },
         )
 
@@ -51,8 +45,7 @@ class AddSong(View):
         song_form = SongForm(data=request.POST)
 
         if song_form.is_valid():
-            song_form.instance.email = request.user.email
-            song_form.instance.name = request.user.username
+            song_form.instance.uploaded_by = request.user
             song_form.save()
         else:
             song_form = SongForm()
@@ -77,6 +70,8 @@ class AccountDetail(View):
         date_joined = model.date_joined
         last_login = model.last_login
 
+        songs = Song.objects.all()
+
         return render(
             request,
             "account.html",
@@ -84,6 +79,7 @@ class AccountDetail(View):
                 "username": username,
                 "email": email,
                 "date_joined": date_joined,
-                "last_login": last_login
+                "last_login": last_login,
+                "songs": songs,
             },
         )
