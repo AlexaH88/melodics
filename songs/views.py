@@ -71,6 +71,8 @@ class AccountDetail(View):
         last_login = model.last_login
 
         songs = Song.objects.all()
+        # user_songs = Song.objects.order_by('uploaded_by')
+        user_songs = Song.objects.filter(uploaded_by=request.user)
 
         return render(
             request,
@@ -81,5 +83,6 @@ class AccountDetail(View):
                 "date_joined": date_joined,
                 "last_login": last_login,
                 "songs": songs,
+                "user_songs": user_songs,
             },
         )
